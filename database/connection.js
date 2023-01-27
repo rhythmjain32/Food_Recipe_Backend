@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/food_recipe')
+const db_url = process.env.DATABASE_URL
+mongoose.connect(db_url)
 .then(() => {
     console.log('connection succesful');
 })
